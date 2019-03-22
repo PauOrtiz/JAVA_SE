@@ -18,6 +18,12 @@ public class Cadenas2 {
 		str=mensaje.toUpperCase();
 		System.out.println("La cadena queda como:\n" + str);
 	}
+	public void aMinusculas() {
+		System.out.println("Introduce la cadena que quieres convertir a minúsculas");
+		mensaje=obScanner.next(); 
+		str=mensaje.toLowerCase();
+		System.out.println("La cadena queda como:\n" + str);	
+	}
 	public void devuelveCaracter() { //listar el contenido de la cadena en cierta posición
 		System.out.println("Introduce la cadena");
 		mensaje=obScanner.next(); 
@@ -35,9 +41,12 @@ public class Cadenas2 {
 		  aMayusculas();
 	  break;
 	  case 3:
+		  aMinusculas();
+	  break;
+	  case 4:
 		  devuelveCaracter();
 	  break;
-	  case 4:System.exit(0);
+	  case 5:System.exit(0);
 	  break;
 	  default: System.out.println("Colección de métodos para cadenas");
 	  }
@@ -48,8 +57,9 @@ public class Cadenas2 {
 		System.out.println("Elige alguna de las siguientes opciones");
 		System.out.println("1:Obtener la longitud de una cadena");
 		System.out.println("2:Cambiar una cadena a mayúsculas");
-		System.out.println("3:Obtener el caracter que se encuentra en cierta posición de la cadena");
-		System.out.println("4:Salir");
+		System.out.println("3:Cambiar una cadena a minúsculas");
+		System.out.println("4:Obtener el caracter que se encuentra en cierta posición de la cadena");
+		System.out.println("5:Salir");
 		obScanner= new Scanner(System.in);
 		opcion=obScanner.nextInt();
 		cadena.metodosCadenas(); //este llama al resto de los métodos		
