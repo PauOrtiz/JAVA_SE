@@ -11,12 +11,13 @@ public class MiExcepcion extends arreglos {
  public void recorrerArreglo(){ //redefinición del método
  	System.out.println("Introduce el índice desde el que quieres recorrer el arreglo");
     indice=obScanner.nextInt();
-    if (indice>0 || indice>-1)
+    if (indice>0 )
     {
    
  	for(int i=indice; i<arr.length;i++) {
  	System.out.println(arr[i]);
       }
+ 	
     }//fin if
  	try { //el bloque conflictivo
  	System.out.println("El contenido de arr[-10] es:"+ arr[-10]); //no existen índices negativos por lo que se produce una excepción del tipo java.lang.ArrayIndexOutOfBoundsException
