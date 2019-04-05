@@ -6,7 +6,7 @@ public class Profesionista2 extends Persona{
 		return numAfiliacion;	
     }
 	//usando el método del padre
-	public int original() {
+	public int original() {//por numAfiliación
 	 return super.getNumAfiliacion();	//super para referirse al método de la superclase--> invoco al método de la superclase, el original
 	}
 	public static void main(String[] args) {
@@ -17,5 +17,4 @@ public class Profesionista2 extends Persona{
 		System.out.println("La ejecución del método sobrescrito es:"+ nuevoP.getNumAfiliacion());
 		System.out.println( "La ejecución del método del padre es:"+ segundoNuevoP.original());// ejecuta el método del padre	
 	}
-
 }
