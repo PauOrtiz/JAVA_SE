@@ -17,4 +17,5 @@ public class Profesionista2 extends Persona{
 		System.out.println("La ejecución del método sobrescrito es:"+ nuevoP.getNumAfiliacion());
 		System.out.println( "La ejecución del método del padre es:"+ segundoNuevoP.original());// ejecuta el método del padre	
 	}
+
 }
