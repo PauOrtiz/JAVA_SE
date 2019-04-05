@@ -1,5 +1,5 @@
 package excepctionJava; 
-import java.util.Scanner;
+import java.util.Scanner; //gestión de excepciones
 
 public class MiExcepcion extends arreglos {
  private String cadena="Manejo de excepciones en Java";
