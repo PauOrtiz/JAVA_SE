@@ -5,7 +5,7 @@ public class ElementosSwing extends JFrame { //jframe ventana principal de la ap
 	public static void main(String[] args) {
 		ElementosSwing ventana=new ElementosSwing(); 
 		ventana.getContentPane();
-		ventana.setSize(400,400);
+		ventana.setSize(300,400);
 		ventana.setVisible(true);
 	}
 }
