@@ -26,6 +26,15 @@ public class ArrList {
     public String getIdentificador() {
 	 return this.id;
     }
+    public  String getNombreMascota() {
+    	return this.mascota;
+    }
+    public  String getNombreDueño() {
+    	return this.nomDueño;
+    }
+    public  String getApDueño() {
+    	return this.apDueño;
+    }
  
  //Aparte el Scanner
  
