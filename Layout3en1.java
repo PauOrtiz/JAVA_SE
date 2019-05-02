@@ -18,18 +18,19 @@ public class Layout3en1 {
     //variables y comtenedores
     private JLabel titulo, etiqueta,etiqueta1,etiqueta2,etiqueta3,etiquetaImagen;
     private JPanel panelIzquierdo, panelDerecho, panelInferior,panelCentral;
-   // private JButton botonIz1, botonIz2, botonIz3;
-   // private JButton botonDe1, botonDe2, botonDe3;
     private JButton    botonIn1, botonIn2;
     private JPanel datos;
     private ImageIcon img;
+    private Image imgEscalada;
     private JTextField textoCampo,textoCampo2,textoCampo3,textoCampo4;
 
     public void contruyePanelIzquierdo(){ //Insertar imagen dentro del JPanel
         panelIzquierdo = new JPanel();
         JLabel etiquetaImagen=new JLabel(img);
         etiquetaImagen.setIcon(new ImageIcon(Layout3en1.class.getResource("/interfacesgraficas/imagen/Michelle.jpg")));
-        panelIzquierdo.add(etiquetaImagen);  
+        panelIzquierdo.setBackground(Color.blue);
+        panelIzquierdo.add(etiquetaImagen);
+       
     }
     public void construyePanelCentral() {
     	 datos = new JPanel();
@@ -49,9 +50,7 @@ public class Layout3en1 {
     	 datos.add(etiqueta3);
     	 textoCampo4=new JTextField("Mail",50);
     	 datos.add(textoCampo4);
-    	 //lograr que el campo de texto aparezca al lado de label
-    	
-    	 datos.setLayout(new BoxLayout(datos,BoxLayout.Y_AXIS));
+      	 datos.setLayout(new BoxLayout(datos,BoxLayout.Y_AXIS));
          datos.setBackground(Color.blue);
          
     }
@@ -77,13 +76,12 @@ public class Layout3en1 {
         frame.add(titulo,BorderLayout.NORTH);//centro veterinario
         frame.add(datos, BorderLayout.CENTER);//datos
         frame.add(panelIzquierdo,BorderLayout.WEST);//foto
-        //frame.add(panelDerecho,BorderLayout.EAST);//se anula
         frame.add(panelInferior,BorderLayout.SOUTH);//footer
         //Configuramos el frame
         frame.pack();
         frame.setVisible(true);
-        frame.setSize(400,300);
-		//frame.setResizable(false); 
+        frame.setSize(900,480);
+		frame.setResizable(false); 
 		frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         
