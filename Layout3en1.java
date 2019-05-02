@@ -16,24 +16,20 @@ import javax.swing.WindowConstants;
 
 public class Layout3en1 {
     //variables y comtenedores
-    private JLabel titulo, etiqueta,etiqueta1,etiqueta2,etiqueta3;
+    private JLabel titulo, etiqueta,etiqueta1,etiqueta2,etiqueta3,etiquetaImagen;
     private JPanel panelIzquierdo, panelDerecho, panelInferior,panelCentral;
-    private JButton botonIz1, botonIz2, botonIz3;
-    private JButton botonDe1, botonDe2, botonDe3;
+   // private JButton botonIz1, botonIz2, botonIz3;
+   // private JButton botonDe1, botonDe2, botonDe3;
     private JButton    botonIn1, botonIn2;
     private JPanel datos;
+    private ImageIcon img;
     private JTextField textoCampo,textoCampo2,textoCampo3,textoCampo4;
 
-    public void contruyePanelIzquierdo(){
+    public void contruyePanelIzquierdo(){ //Insertar imagen dentro del JPanel
         panelIzquierdo = new JPanel();
-        botonIz1=new JButton("Izq1");
-        botonIz2=new JButton("Izq2");
-        botonIz3=new JButton("Izq3");
-        panelIzquierdo.setLayout(new BoxLayout(panelIzquierdo,BoxLayout.Y_AXIS));
-        panelIzquierdo.setBackground(Color.red);
-        panelIzquierdo.add(botonIz1);
-        panelIzquierdo.add(botonIz2);
-        panelIzquierdo.add(botonIz3);
+        JLabel etiquetaImagen=new JLabel(img);
+        etiquetaImagen.setIcon(new ImageIcon(Layout3en1.class.getResource("/interfacesgraficas/imagen/Michelle.jpg")));
+        panelIzquierdo.add(etiquetaImagen);  
     }
     public void construyePanelCentral() {
     	 datos = new JPanel();
@@ -96,7 +92,7 @@ public class Layout3en1 {
     public Layout3en1(){
         contruyePanelInferior();
         contruyePanelIzquierdo();
-        //contruyePanelDerecho();
+       
         construyePanelCentral();
        
         contruyeVentana();
@@ -104,6 +100,8 @@ public class Layout3en1 {
 
     public static void main (String [] inforux){
         new Layout3en1();
+       
     }
 }
+
 
