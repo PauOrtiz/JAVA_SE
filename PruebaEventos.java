@@ -1,5 +1,4 @@
 package interfacesgraficas;
-
 import java.awt.EventQueue;
 import javax.swing.*;
 import java.awt.event.*;
@@ -7,13 +6,9 @@ import java.awt.event.*;
 public class PruebaEventos extends JFrame {
  
     private JPanel contentPane;
-    private JTextField textField;
-    private JTextField textField_1;
-    private JTextField textField_2;
+    private JTextField textField,textField_1,textField_2;
     private JComboBox<String> comboBox;
-    private JRadioButton rdbtnOpcion;
-    private JRadioButton rdbtnOpcion_1;
-    private JRadioButton rdbtnOpcion_2;
+    private JRadioButton rdbtnOpcion, rdbtnOpcion_1,rdbtnOpcion_2;
     private JLabel lblEstasSobreLa;
  
     /**
