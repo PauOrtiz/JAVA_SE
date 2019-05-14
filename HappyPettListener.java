@@ -1,9 +1,9 @@
+package interfacesgraficas;
 import java.awt.BorderLayout;
 import javax.swing.ImageIcon;
 import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.Font;
-import java.awt.event.*;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -12,7 +12,7 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 
-public class HappyPettListener extends miListener implements ActionListener {
+public class HappyPettListener extends miListener {
  
 	//variables y contenedores
     private static  JLabel titulo,etiqueta,etiqueta1,etiqueta2,etiqueta3,etiqueta4, etiquetaImagen;
@@ -63,9 +63,8 @@ public class HappyPettListener extends miListener implements ActionListener {
     public static void PanelInferior(){
         panelInferior = new JPanel();
         botonIn1=new JButton("Guardar");
-        ActionListener miListener=new HappyPettListener(); //se crea una clase aparte para el listener
-        //agregar al-->http://www.edu4java.com/es/swing/swing4.html
-        botonIn1.addActionListener(miListener);
+        miListener miListener1=new miListener(); 
+        botonIn1.addActionListener(miListener1);
         botonIn2=new JButton("Cancelar");
         panelInferior.setLayout(new FlowLayout());
         panelInferior.setBackground(Color.black);
@@ -91,14 +90,12 @@ public class HappyPettListener extends miListener implements ActionListener {
 		frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setVisible(true);
-    }
-    
- static void main (String [] in){
+    }  
+public static void main (String [] in){
         new HappyPettListener(); 
         PanelInferior();
         PanelIzquierdo();
         PanelCentral();
         Ventana();
-    }
-	
+    }	
 }
