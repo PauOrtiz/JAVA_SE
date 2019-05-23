@@ -22,8 +22,8 @@ try {
 Object resultado= motor.eval("print('BIENVENIDO AL:')");
 Prueba p= new Prueba(Nombre);
 p.setNombre("Sistema de control veterinario");
-motor.put("persona", p);
-motor.eval("print(persona.getNombre())");
+motor.put("cliente", p);
+motor.eval("print(cliente.getNombre())");
   } catch (ScriptException e) {
 e.printStackTrace();
   }
