@@ -10,7 +10,7 @@ public class MetodoJavaEnJs {
 	public static void main(String[] args) {
 		ScriptEngine engine = new ScriptEngineManager().getEngineByName("nashorn");
 		try {
-		engine.eval(new FileReader("src/js/javaScriptF.js"));
+		engine.eval(new FileReader("src/js/javaScriptF2.js"));
 		Invocable invocable = (Invocable) engine;
 		invocable.invokeFunction("suma", 10, 20); //la función js y sus parámetros
 		}catch(ScriptException|FileNotFoundException|NoSuchMethodException e) {
