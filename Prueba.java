@@ -5,27 +5,27 @@ import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 
 public class Prueba {
-	private static String Nombre;
-    public Prueba(String Nombre){ //constructor
-       Nombre="";
+	private static String Curso;
+    public Prueba(String Curso){ //constructor
+       Curso=" ";
     }	
-	public void setNombre(String Nombre){ 
-		Prueba.Nombre=Nombre;
+	public void setCurso(String Curso){ 
+		Prueba.Curso=Curso;
+    }
+   public String getCurso(){
+    return Prueba.Curso;
    }
-   public String getNombre(){
-    return Prueba.Nombre;
-  }
 public static void main(String args[]) {
 ScriptEngineManager manager= new ScriptEngineManager();
-ScriptEngine motor= manager.getEngineByName("nashorn");
+ScriptEngine m= manager.getEngineByName("nashorn");
 try {
-Object resultado= motor.eval("print('BIENVENIDO AL:')");
-Prueba p= new Prueba(Nombre);
-p.setNombre("Sistema de control veterinario");
-motor.put("cliente", p);
-motor.eval("print(cliente.getNombre())");
+m.eval("print('BIENVENIDO AL CURSO:')");
+Prueba p= new Prueba(Curso);
+p.setCurso("Fundamentos de Java SE");
+m.put("llave", p);
+m.eval("print(llave.getCurso())");
   } catch (ScriptException e) {
 e.printStackTrace();
+   }
   }
- }
 }
