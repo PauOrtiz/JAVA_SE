@@ -3,6 +3,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import javax.swing.JOptionPane;
+
 import modelo.Conexion;
 import modelo.ConsultasDueñoMascota;
 import modelo.DueñoMascota;
@@ -18,10 +21,10 @@ public class ConsultasDueñoMascota extends Conexion {
         try {
             ps = con.prepareStatement(sql);
             ps.setInt(1, pro.getId()); //NÚMERe almacena
-            ps.setString(2, pro.getNom_dueño());
-            ps.setString(3, pro.getAp_dueño());
+            ps.setString(2, pro.getNomDueño());
+            ps.setString(3, pro.getApDueño());
             ps.setInt(4, pro.getTel());
-            ps.setString(5, pro.getNom_mascota());
+            ps.setString(5, pro.getNomMascota());
             ps.setString(6, pro.getObservaciones());
             ps.execute();
             return true;
@@ -41,17 +44,20 @@ public class ConsultasDueñoMascota extends Conexion {
         PreparedStatement ps = null;
         Connection con = getConexion();
 
-        String sql = "UPDATE producto SET id_datos=?, nom_dueño=?, ap_dueño=?, tel=?,nom_mascota=?,observaciones=? WHERE id=? ";
+      
+        String sql = "UPDATE datos SET  nom_dueño=?, ap_dueño=?, tel=?,nom_mascota=?,observaciones=? WHERE id_datos=? ";
 
         try {
             ps = con.prepareStatement(sql);
-            ps.setInt(1, pro.getId()); //NÚMERe almacena
-            ps.setString(2, pro.getNom_dueño());
-            ps.setString(3, pro.getAp_dueño());
-            ps.setInt(4, pro.getTel());
-            ps.setString(5, pro.getNom_mascota());
-            ps.setString(6, pro.getObservaciones());
+           // ps.setInt(1, pro.getId()); //NÚMERe almacena
+            ps.setString(1, pro.getNomDueño());
+            ps.setString(2, pro.getApDueño());
+            ps.setInt(3, pro.getTel());
+            ps.setString(4, pro.getNomMascota());
+            ps.setString(5, pro.getObservaciones());
+            ps.setInt(6, pro.getId());
             ps.execute();
+            ps.close();
             return true;
         } catch (SQLException e) {
             System.err.println(e);
@@ -69,7 +75,7 @@ public class ConsultasDueñoMascota extends Conexion {
         PreparedStatement ps = null;
         Connection con = getConexion();
 
-        String sql = "DELETE FROM datos WHERE id=? ";
+        String sql = "DELETE FROM datos WHERE id_datos=? ";
 
         try {
             ps = con.prepareStatement(sql);
@@ -87,13 +93,13 @@ public class ConsultasDueñoMascota extends Conexion {
             }
         }
     }
-    
+    //hay que evaluar éste
     public boolean buscar(DueñoMascota pro) {
         PreparedStatement ps = null;
         ResultSet rs = null;
         Connection con = getConexion();
 
-        String sql = "SELECT * FROM producto WHERE id_datos=? ";
+        String sql = "SELECT * FROM datos WHERE id_datos=? ";
 
         try {
             ps = con.prepareStatement(sql);
@@ -103,9 +109,9 @@ public class ConsultasDueñoMascota extends Conexion {
             if(rs.next())
             {
                pro.setId( Integer.parseInt(rs.getString("id_datos")));
-               pro.setNom_mascota(rs.getString("nom_mascota"));
-               pro.setNom_dueño(rs.getString("nom_dueño"));
-               pro.setAp_dueño(rs.getString("ap_dueño"));
+               pro.setNomMascota(rs.getString("nom_mascota"));
+               pro.setNomDueño(rs.getString("nom_dueño"));
+               pro.setApDueño(rs.getString("ap_dueño"));
                pro.setTel(Integer.parseInt(rs.getString("tel")));
                pro.setObservaciones(rs.getString("observaciones"));
                return true;
