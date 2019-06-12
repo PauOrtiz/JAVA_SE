@@ -1,4 +1,5 @@
-package controlador; 
+package controlador1; 
+
 import modelo.ConsultasDueñoMascota;
 import modelo.DueñoMascota;
 import vista.frmHappyPet2;
@@ -23,22 +24,15 @@ public class CtlrDueñoMascota implements ActionListener {
         this.frm. botonIn5.addActionListener(this);
         
     }
-
-    public void iniciar() {//-->parece no neceario
-        frm.setTitle("Datos del dueño y su mascota");
-        frm.setLocationRelativeTo(null);
-        frm.textoCampo0.setVisible(false); //rastrear los nombres de los campos del formulario
-    }
-
     @Override
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == frm.botonIn1) {
         	mod.setId(Integer.parseInt(frm.textoCampo0.getText()));
         	//a partir de los setters
-        	mod.setNom_mascota(frm.textoCampo.getText());
-            mod.setNom_dueño(frm.textoCampo2.getText());
-            mod.setAp_dueño(frm.textoCampo3.getText());
+        	mod.setNomMascota(frm.textoCampo.getText());
+            mod.setNomDueño(frm.textoCampo2.getText());
+            mod.setApDueño(frm.textoCampo3.getText());
             mod.setTel(Integer.parseInt(frm.textoCampo4.getText()));
             mod.setObservaciones(frm.textoCampo5.getText());
             
@@ -56,9 +50,9 @@ public class CtlrDueñoMascota implements ActionListener {
         if (e.getSource() == frm.botonIn3) {
         	mod.setId(Integer.parseInt(frm.textoCampo0.getText()));
         	//a partir de los setters
-        	mod.setNom_mascota(frm.textoCampo.getText());
-            mod.setNom_dueño(frm.textoCampo2.getText());
-            mod.setAp_dueño(frm.textoCampo3.getText());
+        	mod.setNomMascota(frm.textoCampo.getText());
+            mod.setNomDueño(frm.textoCampo2.getText());
+            mod.setApDueño(frm.textoCampo3.getText());
             mod.setTel(Integer.parseInt(frm.textoCampo4.getText()));
             mod.setObservaciones(frm.textoCampo5.getText());
             
@@ -92,9 +86,9 @@ public class CtlrDueñoMascota implements ActionListener {
             if(modC.buscar(mod))
             {
                 frm.textoCampo0.setText(String.valueOf(mod.getId()));
-                frm.textoCampo.setText(mod.getNom_mascota());
-                frm.textoCampo2.setText(mod.getNom_dueño());
-                frm.textoCampo3.setText(mod.getAp_dueño());
+                frm.textoCampo.setText(mod.getNomMascota());
+                frm.textoCampo2.setText(mod.getNomDueño());
+                frm.textoCampo3.setText(mod.getApDueño());
                 frm.textoCampo4.setText(String.valueOf(mod.getTel()));
                 frm.textoCampo5.setText(mod.getObservaciones());
 
@@ -107,7 +101,6 @@ public class CtlrDueñoMascota implements ActionListener {
         if (e.getSource() == frm.botonIn2) {
             limpiar();
         }
-
     }
     
     public void limpiar()
@@ -118,6 +111,5 @@ public class CtlrDueñoMascota implements ActionListener {
         frm.textoCampo3.setText(null);
         frm.textoCampo4.setText(null);
         frm.textoCampo5.setText(null);
-    }
-    
+    }    
 }
