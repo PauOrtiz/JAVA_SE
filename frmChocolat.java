@@ -6,6 +6,8 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import java.awt.BorderLayout;
 import java.awt.Color;
+import javax.swing.SwingConstants;
+import javax.swing.JComboBox;
 
 public class frmChocolat {
 
@@ -43,8 +45,15 @@ public class frmChocolat {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		JLabel lblChocolat = new JLabel("CHOCOLAT");
-		lblChocolat.setBackground(Color.ORANGE);
+		lblChocolat.setForeground(new Color(244, 164, 96));
+		lblChocolat.setBackground(new Color(0, 0, 0));
 		frame.getContentPane().add(lblChocolat, BorderLayout.NORTH);
+		
+		JLabel lblNewLabel = new JLabel("Id");
+		frame.getContentPane().add(lblNewLabel, BorderLayout.WEST);
+		
+		JComboBox comboBox = new JComboBox();
+		frame.getContentPane().add(comboBox, BorderLayout.CENTER);
 	}
 
 }
