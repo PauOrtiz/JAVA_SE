@@ -1,7 +1,10 @@
+import java.util.Scanner; 
 
 public class Password {
   private int longitud;
   private String contraseña;
+  private static Scanner obDatos, obDatos2;
+  
    public Password(int l) {
 	 this.longitud=l; 
    }
@@ -28,7 +31,9 @@ public class Password {
    }
 	public static void main(String[] args) {
 		Password p=new Password();
+		obDatos = new Scanner(System.in);
+		obDatos2 = new Scanner(System.in);
 	}
-
 }
+
 
