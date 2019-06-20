@@ -23,8 +23,12 @@ public class Password {
    public int getLongitud() {
 	   return longitud;
    }
-   public void leePassword() {
-	   
+   public void esFuerte(String c, int l) {
+	  obtenerContraseña();    
+	  boolean fuerte=false;
+	  if(contraseña.length()>5) {
+		System.out.println("Es segura");  
+	  }else System.out.println("No lo es");
    }
    public void obtenerContraseña() {
 	   System.out.println("Ingrese la contraseña:");
@@ -34,13 +38,13 @@ public class Password {
 	   System.out.println("Ingresa la longitud:");
 	   longitud=obDatos2.nextInt();
    }
-   public boolean esFuerte(String c) {
+   /*public boolean esFuerte(String c) {
 	   boolean fuerte=false;
 	   if(c>5) {//establecer bien la condición
 		 fuerte=false;  
 	   }
     return fuerte;
-   }
+   }*/
    
    public void generarPassword(int l) {
 	   //genera de forma aleatoria una contraseña
