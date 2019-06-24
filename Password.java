@@ -1,9 +1,10 @@
 package ejercicios; 
 import java.util.Scanner; 
 
+
 public class Password {
-  private String contraseña;
-  private char cadena;
+  private String contraseña, cadena2;
+  private char[] cadena;
   private static Scanner obDatos;
   
   
@@ -15,15 +16,21 @@ public class Password {
    }
    public String obtenerContraseña() {
 	   System.out.println("Ingrese la contraseña:");
-	   contraseña=obDatos.nextLine();
+	   contraseña=obDatos.next();
 	   return contraseña;
    }
    public  void minusculasDeMayusculas() {
 	   obtenerContraseña(); 
+	   cadena=contraseña.toCharArray();
 	   for(int i=0;i<contraseña.length();i++) {
-	   cadena=contraseña.charAt(i);
-	   System.out.println("El contenido es:"+ cadena);
-	    }
+	  
+	  System.out.println("El contenido es:"+ cadena[i]);
+	 
+	  if(cadena[i]=='a'|| cadena[i]=='f') {
+		System.out.println("Es realmente segura");  
+	  }
+	   
+	   }
    }
    
 	public static void main(String[] args) {
