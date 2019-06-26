@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class ContraseñaRegex {
 private static String c;
+boolean password;
 private String pattern;
 private static Scanner obDatos;
 //constructor
@@ -20,8 +21,9 @@ private static Scanner obDatos;
 	   Datos();
 	   //password=c;
 	   pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[@#$%^&+=])(.{4,6})";
+	   password = c.matches(pattern);
 	  //un dígito al menos una vez,también al menos una letra minúscula, también mayúscula,también un caracter especial, no espacios en blanco, al menos "n" caracteres mínimo,"n" máximo
-	   if( c.matches(pattern)) {
+	   if( password==true) {
 		 System.out.println("Tu contraseña es segura"); 
 	  }else {
 		  System.out.println("Tu contraseña no es segura,intenta de nuevo");
