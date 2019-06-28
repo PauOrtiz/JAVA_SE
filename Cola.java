@@ -1,14 +1,24 @@
-package ejercicios;
 import java.util.Queue;
 import java.util.LinkedList;
 
 
 public class Cola {
-	
-
+	Queue <String> c=new LinkedList<String>();//CREACIÓN DEL OBJETO COLA, PUEDO DEFINIRLO AQUÍ O EN MAIN
+    public void agregar() {
+    	c.add("Seiya");
+    	c.add("Shun");
+    	c.add("Atena");
+    	c.add("Seiya");
+    	c.add("Shun");
+    	c.add("Atena");
+    }
+    public void imprimir() {
+    	System.out.println("Elemento:" + c);
+    }
 	public static void main(String[] args) {
-		Queue <String> c=new LinkedList<String>(); 
-       
+		Cola l=new Cola();
+		l.agregar();
+		l.imprimir();   
 	}
 
 }
