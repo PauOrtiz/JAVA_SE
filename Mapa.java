@@ -1,8 +1,7 @@
 import java.util.HashMap;
-import java.util.Map.Entry;
-import java.util.ArrayList;
+
 public class Mapa {
-	public static HashMap <String, String> paises=new HashMap<String, String>();//almacena en un arrayList los valores
+	public static HashMap <String, String> paises=new HashMap<String, String>();
    public void agregar() {
 	   paises.put("América", "Argentina");
 	   paises.put("Europa", "Francia");
@@ -10,13 +9,15 @@ public class Mapa {
    }
    public void mostrar() {
 	   
-	   System.out.println("elementos:"+ m.getKey()+ m.getValue() );
+	   paises.forEach((k,v)->System.out.println("elementos:"+ k + ":Valor:"+v));
    }
 	public static void main(String[] args) {
 		
 		Mapa m= new Mapa();
 		m.agregar();
+		m.mostrar();
 
 	}
 
 }
+
