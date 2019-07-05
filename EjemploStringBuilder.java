@@ -1,9 +1,12 @@
 public class EjemploStringBuilder {
 
 	private String str= "Usando StringBuilder",ss;
-		int s, s2;
+	int s, s2;
 	private StringBuilder str2= new StringBuilder(str);
+	private StringBuilder str3= new StringBuilder();
+	
 	private static Scanner obdatos,obd;
+	
 	
 	public void longitud() {
 		System.out.println("La longitud de la cadena es:"+ str2.length());
@@ -14,18 +17,23 @@ public class EjemploStringBuilder {
 		str2.setLength(s);//realiza la operación sobre el argumento y ese es el nuevo valor para str2
 		System.out.println("La cadena es:" + str2);
 		}
-	public void reemplazar() {
-		System.out.println("Ingresa la cadena que ocupará el lugar de \"caracteres\" en la cadena:");
-		ss=obd.nextLine();	
-	    System.out.println("La nueva cadena es:"+ str.replace("caracteres", "ss") );
-	}   
+	
 	public void imprimeConsola() {
 		System.out.println("El contenido de la cadena es:"+"******"+ str2+"*****");
 	}
+	public void reemplazar() {
+		System.out.println("Ingresa la cadena que ocupará el lugar de \"b\" en la cadena:");
+		ss=obd.next();	
+		str3 =str2.replace(	5,s, ss);   
+	    System.out.println("La nueva cadena es:"+ str3.toString() );
+	   obd.close(); 
+	}   
 	
 	public static void main(String[] args) {
 	 EjemploStringBuilder b= new EjemploStringBuilder();
 	 obdatos=new Scanner(System.in);
+	 obd=new Scanner(System.in);
+	
 	 b.imprimeConsola();
 	 b.longitud();
 	 b.extraer();
