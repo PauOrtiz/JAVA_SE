@@ -8,10 +8,7 @@ public class EjemploStringBuilder {
 	static int op,ops2;
 	private StringBuilder str2= new StringBuilder(str);
 	private StringBuilder str3= new StringBuilder();
-	
 	private static Scanner obdatos,obd,ops;
-	
-   
 	
 	public void longitud() {
 		System.out.println("La longitud de la cadena es:"+ str2.length());
