@@ -1,4 +1,4 @@
-
+import java.io.PrintWriter;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,7 +26,17 @@ public class Saludo extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		PrintWriter out=response.getWriter();
+		out.println("<html>");
+		out.println("<head></head>");
+		out.println("<body>");
+		out.println("<h1>SALUDOS: JAKARTA EE</h1>");
+		for(int i=1; i<=5;i++) {
+			out.println(i);
+			out.println("-");
+		}
+		out.println("</body>");
+		out.println("</html");
 	}
 
 	/**
@@ -34,7 +44,8 @@ public class Saludo extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		
 	}
 
 }
+
