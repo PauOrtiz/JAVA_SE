@@ -31,9 +31,10 @@ public class Saludo extends HttpServlet {
 		out.println("<head></head>");
 		out.println("<body>");
 		out.println("<h1>SALUDOS: JAKARTA EE</h1>");
+		out.println("************************************************ <br>");
 		for(int i=1; i<=5;i++) {
 			out.println(i);
-			out.println("-");
+			out.println("- <br>");
 		}
 		out.println("</body>");
 		out.println("</html");
