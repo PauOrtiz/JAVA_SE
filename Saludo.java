@@ -29,7 +29,7 @@ public class Saludo extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		out.println("<html>");
 		out.println("<head></head>");
-		out.println("<body>");
+		out.println("<body bgcolor=\"#CCBBAA\">");
 		out.println("<h1>SALUDOS: JAKARTA EE</h1>");
 		out.println("************************************************ <br>");
 		for(int i=1; i<=5;i++) {
