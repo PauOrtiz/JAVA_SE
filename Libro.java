@@ -12,17 +12,22 @@ import javax.swing.BoxLayout;
 public class Libro extends JPanel implements ActionListener{
  
 private JButton b;
- private JLabel text;
+private JLabel text,lblLibreraPegaso; 
 	
 	public Libro() {
 		setBackground(Color.MAGENTA);
-		setForeground(Color.BLACK);
+		setForeground(Color.WHITE);
 		setLayout(null);
-		b=new JButton("Ingresar");
-		b.setBounds(100,150,100,30);
+		b=new JButton("Cupón de descuento");
+		b.setBounds(94,137,200,30);
 		b.addActionListener(this);
 		add(b);
-		JLabel lblLibreraPegaso = new JLabel("LIBRER\u00CDA PEGASO");
+		text=new JLabel("Haz clic para obtenerlo");
+		text.setBounds(94,114,301,24); //izquierda, alto respecto al borde inferior, ancho,alto(x,y,ancho,alto)
+		text.setForeground(Color.white);
+		text.setFont(new Font("Traditional Arabic", Font.BOLD | Font.ITALIC, 20));		
+		add(text);
+	     lblLibreraPegaso = new JLabel("LIBRER\u00CDA PEGASO");
 		lblLibreraPegaso.setVerticalAlignment(SwingConstants.BOTTOM);
 		lblLibreraPegaso.setForeground(Color.BLACK);
 		lblLibreraPegaso.setFont(new Font("Traditional Arabic", Font.BOLD | Font.ITALIC, 16));
