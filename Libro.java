@@ -13,7 +13,6 @@ public class Libro extends JPanel implements ActionListener{
  
 private JButton b;
 private JLabel text,lblLibreraPegaso; 
-	
 	public Libro() {
 		setBackground(Color.MAGENTA);
 		setForeground(Color.WHITE);
@@ -27,12 +26,10 @@ private JLabel text,lblLibreraPegaso;
 		text.setForeground(Color.white);
 		text.setFont(new Font("Traditional Arabic", Font.BOLD | Font.ITALIC, 20));		
 		add(text);
-	     lblLibreraPegaso = new JLabel("LIBRER\u00CDA PEGASO");
+	     lblLibreraPegaso = new JLabel("LIBRERÍA PEGASO");
+	     lblLibreraPegaso.setBounds(100,37,300,30);
 		lblLibreraPegaso.setVerticalAlignment(SwingConstants.BOTTOM);
-		lblLibreraPegaso.setForeground(Color.BLACK);
-		lblLibreraPegaso.setFont(new Font("Traditional Arabic", Font.BOLD | Font.ITALIC, 16));
+		lblLibreraPegaso.setFont(new Font("Verdana", Font.BOLD, 21));
 		add(lblLibreraPegaso);
 
 	}
-
-}
