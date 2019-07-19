@@ -27,6 +27,7 @@ private JPanel p;
 		text.setForeground(Color.white);
 		text.setFont(new Font("Traditional Arabic", Font.BOLD | Font.ITALIC, 20));		
 		add(text);
+		b.addActionListener(null);
 	     lblLibreraPegaso = new JLabel("LIBRERÍA PEGASO");
 	     lblLibreraPegaso.setBounds(94,37,300,30);
 		lblLibreraPegaso.setVerticalAlignment(SwingConstants.BOTTOM);
@@ -37,6 +38,8 @@ private JPanel p;
     	 p.setVisible(true);
     	 add(p);
      
-
-	}
+     public void actionPerformed(ActionEvent e) {
+	       System.out.println("En breve ser á redireccionado");
+         }     
+  }
 }
