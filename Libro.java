@@ -19,8 +19,9 @@ private JPanel p;
 		setForeground(Color.WHITE);
 		setLayout(null);
 		b=new JButton("Cupón de descuento");
+		Libro elListener=new Libro();
+		b.addActionListener(elListener);
 		b.setBounds(94,137,200,30);
-		b.addActionListener(null);
 		add(b);
 		text=new JLabel("Haz clic para obtenerlo");
 		text.setBounds(94,114,301,24); //izquierda, alto respecto al borde inferior, ancho,alto(x,y,ancho,alto)
