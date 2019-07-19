@@ -20,7 +20,7 @@ private JPanel p;
 		setLayout(null);
 		b=new JButton("Cupón de descuento");
 		b.setBounds(94,137,200,30);
-		b.addActionListener(this);
+		b.addActionListener(null);
 		add(b);
 		text=new JLabel("Haz clic para obtenerlo");
 		text.setBounds(94,114,301,24); //izquierda, alto respecto al borde inferior, ancho,alto(x,y,ancho,alto)
@@ -37,9 +37,15 @@ private JPanel p;
 		 p.setBounds(500,500,500,500);
     	 p.setVisible(true);
     	 add(p);
+	}
      
-     public void actionPerformed(ActionEvent e) {
-	       System.out.println("En breve ser á redireccionado");
-         }     
-  }
+    	 public void actionPerformed(ActionEvent e) {
+    			if (e.getSource() == b) {
+    				System.out.println("En breve será redireccionado");
+    			}
+    	public static void main (String [] args){
+    			new Libro();     
+    			    
+    			}			    
+       }
 }
