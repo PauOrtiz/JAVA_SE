@@ -43,7 +43,8 @@ private JPanel p;
     	 ImageIcon img2= new ImageIcon(img.getScaledInstance(78, 130, Image.SCALE_SMOOTH));
     	 //lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Public\\Pictures\\Sample Pictures\\Lighthouse.jpg"));
     	 //lblNewLabel.setBounds(26, 178, 343, 79);
-    	 lblNewLabel.setIcon(img2);
+		 lblNewLabel.setIcon(img2);
+		 this.repaint();
     	 add(lblNewLabel);
 	}
      
