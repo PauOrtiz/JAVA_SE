@@ -37,7 +37,11 @@ private JPanel p;
 		p=new JPanel();
 		 p.setBounds(500,500,500,500);
     	 p.setVisible(true);
-    	 add(p);
+		 add(p);
+		 JLabel lblNewLabel = new JLabel("New label");
+    	 lblNewLabel.setIcon(new ImageIcon("C:\\Users\\Public\\Pictures\\Sample Pictures\\Lighthouse.jpg"));
+    	 lblNewLabel.setBounds(26, 178, 343, 79);
+    	 add(lblNewLabel);
 	}
      
     	 public void actionPerformed(ActionEvent e) {
